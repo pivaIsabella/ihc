@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+html *, html * :before, html* :after {
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+html i,html em,html b, html strong,
+html span {
+    transition: none;
+}
+*:before, *:after {
+    z-index: -1;
+}
+h1 {
+    font-family: "Raleway", "Open Sans", sans-serif;
+    margin: 0;
+    line-height: 1;
+    padding-top: 10vh;
+    color: #ffffff;
+}
+a {
+    text-decoration: none;
+    line-height: 80px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+[class^=btn-] {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%; height: 80px;
+    max-width: 250px;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    border: 1px solid #ffff;;
+}
+@-webkit-keyframes criss-cross-right {
+    0%{
+        left: -20px;
+    }
+    50% {
+        left: 50%;
+        width: 20px; height: 20px;
+    }
+    100% {
+        left: 50%;
+        width: 375px; height: 375px;
+    }
+}
+.btn-11 {
+    position: relative;
+    color: #784093;
+}
+.btn-11:before, .btn-11:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px; height: 20px; 
+    background-color: #ffff;
+    border-radius: 50%;
+}
+.btn-11 span{
+    color: #ffff;
+}
+.btn-11:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+}
+.btn-11:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+}
+.btn-11:hover {
+    color: #aa5ad2;
+}
+.btn-11:hover:before {
+    -webkit-animation:criss-cross-left 0.20s both;
+            animation:criss-cross-left 0.20s both;;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+.btn-11:hover:after {
+    -webkit-animation:criss-cross-right 0.8s both;
+            animation:criss-cross-right 0.8s both;;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+.gradient {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
+	background-size: 180% 180%;
+	animation: gradient-animation 6s ease infinite;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
